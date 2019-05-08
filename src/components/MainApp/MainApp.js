@@ -19,36 +19,44 @@ class App extends Component {
     super(props);
 
     this.state = {
-      comics: []
+      comics: [],
+      searchTerm: ''
     }
-  }
 
+    this.onSearchChange = this.onSearchChange.bind(this);
+  }
 
   fetchComics(){
     axios
-    .get(url)
-    .then(response => this.setState({comics: response.data.results}))
-    .catch(errors => console.log(errors));
+      .get(url)
+      .then(response => this.setState({comics: response.data.results}))
+      .catch(errors => console.log(errors));
+  }
+
+  onSearchChange(value) {
+    this.setState({ searchTerm: value });
   }
 
   componentDidMount() {
     this.fetchComics();
   }
 
+
   render() {
-    const {comics} = this.state;
+    const {comics, searchTerm} = this.state;
 
     return (
       <div className="App">
-        <NavBar app_title="Comic Info" />
-        <div className="row justify-content-center">
+        <NavBar app_title="ComicInfo" value={searchTerm} onSearchChange={this.onSearchChange} />
+        <div className="row justify-content-center section-separation">
           <div className="col-12 ">
-            <h2 className="site-section-heading text-center">Comic</h2>
+            <h2 className="site-section-heading text-center">List Comic</h2>
           </div>
         </div>
 
         <div className="list-comics row">
-          {comics.map(comic =>
+          {comics.filter((item) => item.name.toLowerCase().indexOf(searchTerm.toLowerCase()) !== -1)
+            .map(comic =>
             <ComicCard key={comic.id}
               name={comic.name}
               thumbnail={comic.image.thumb_url}
