@@ -1,0 +1,246 @@
+.card-view {
+  background: #fff;
+  -webkit-box-shadow: 0px 1px 1px 0px rgba(204, 204, 204, 0.2);
+  -moz-box-shadow: 0px 1px 1px 0px rgba(204, 204, 204, 0.2);
+  box-shadow: 0px 1px 1px 0px rgba(204, 204, 204, 0.2);
+  float: left;
+  width: 292px;
+  margin: 5px;
+}
+
+.container {
+  border: 1px solid #efefef;
+  padding: 15px;
+}
+
+.thumbnail-image {
+  display: block;
+  overflow: hidden;
+  max-height: 400px;
+  max-width: 292px;
+}
+
+.thumbnail-image img {
+  -webkit-transform: translate3d(0, -5px, 0);
+  transform: translate3d(0, -5px, 0);
+  transition: opacity 0.35s, transform 0.35s;
+  -webkit-transition: opacity 0.35s, transform 0.35s;
+}
+
+.thumbnail-image:hover img {
+  opacity: 0.7;
+  transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
+}
+
+.tag_name {
+  font-family: 'Roboto Slab', serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+
+.info {
+  display: table-cell;
+  vertical-align: middle;
+  padding-top: 5px;
+  padding-left: 10px;
+  line-height: 18px;
+}
+
+.name {
+  font-size: 20px;
+  font-weight: 500;
+  color: #3c3c3c;
+}
+
+.content {
+  margin-top: -10px;
+}
+
+.content p {
+  line-height: 21px;
+}
+
+.content .title {
+  color: #484848;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 0.02em;
+}
+
+.content .review {
+  font-weight: 300;
+  font-size: 14px;
+  letter-spacing: 0.05em;
+  margin-top: -10px;
+}
+
+
+/* ---- List View ---- */
+
+.list-view {
+  background: #fff;
+  -webkit-box-shadow: 0px 1px 1px 0px rgba(204, 204, 204, 0.2);
+  -moz-box-shadow: 0px 1px 1px 0px rgba(204, 204, 204, 0.2);
+  box-shadow: 0px 1px 1px 0px rgba(204, 204, 204, 0.2);
+  float: left;
+  margin: 5px;
+}
+
+.list-view:last-child {
+  margin-bottom: 20px;
+}
+
+.list-view .container {
+  border: 1px solid #efefef;
+  padding: 15px;
+}
+
+.list-view .bg {
+  display: none;
+}
+
+.list-view .bg img {
+  -webkit-transform: translate3d(0, -5px, 0);
+  transform: translate3d(0, -5px, 0);
+  transition: opacity 0.35s, transform 0.35s;
+  -webkit-transition: opacity 0.35s, transform 0.35s;
+}
+
+.list-view .bg:hover img {
+  opacity: 0.7;
+  transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
+}
+
+.list-view .tag_name {
+  font-family: 'Roboto Slab', serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+
+/* COMPANY INFO ------------------------ */
+
+.list-view .c_logo {
+  display: none;
+}
+
+.list-view .c_logo img {
+  display: none;
+}
+
+.list-view .c_info {
+  display: table-cell;
+  vertical-align: middle;
+  padding-top: 5px;
+  padding-left: 0;
+  line-height: 18px;
+}
+
+.list-view .c_name {
+  font-size: 20px;
+  font-weight: 500;
+  color: #3c3c3c;
+}
+
+.list-view .c_industry {
+  font-weight: 400;
+  font-size: 12px;
+  letter-spacing: 0.05em;
+  color: #7e8890;
+}
+
+.list-view #c_stars,
+#c_stars span {
+  /* white star bottom */
+  display: inline-block;
+  background: url('https://s15.postimg.org/igu2opvh3/stars.png') 0 -12px repeat-x;
+  width: 60px;
+  height: 12px;
+}
+
+.list-view #c_stars span {
+  /* orange stars overlay  - set width by JS code */
+  background-position: 0 0;
+  vertical-align: super;
+}
+
+.list-view .c_num {
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 500;
+  vertical-align: super;
+}
+
+.list-view .c_content {
+  margin-top: -15px;
+}
+
+.list-view .c_content p {
+  line-height: 21px;
+}
+
+.list-view .c_content .title {
+  color: #484848;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 0.02em;
+}
+
+.list-view .c_content .review {
+  font-weight: 300;
+  font-size: 14px;
+  letter-spacing: 0.05em;
+  margin-top: -10px;
+}
+
+
+/* USER INFO ------------------------ */
+
+.list-view .user .user_avatar img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+}
+
+.user .user_avatar {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.list-view .user .user_info {
+  display: table-cell;
+  vertical-align: middle;
+  color: rgba(0, 0, 0, 0.35);
+  font-size: 14px;
+  line-height: 1.4;
+  padding-left: 10px;
+}
+
+.list-view .user .user_name {
+  font-weight: 500;
+}
+
+@media screen and (max-width: 920px) and (min-width: 621px) {
+  .full-width {
+    max-width: 604px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .full-width {
+    max-width: 302px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
