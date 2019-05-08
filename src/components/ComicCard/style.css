@@ -8,11 +8,6 @@
   margin: 5px;
 }
 
-.container {
-  border: 1px solid #efefef;
-  padding: 15px;
-}
-
 .thumbnail-image {
   display: block;
   overflow: hidden;
@@ -64,18 +59,18 @@
   line-height: 21px;
 }
 
-.content .title {
+.content .review{
   color: #484848;
   font-weight: 500;
   font-size: 16px;
   letter-spacing: 0.02em;
 }
 
-.content .review {
+.content .summary {
   font-weight: 300;
   font-size: 14px;
   letter-spacing: 0.05em;
-  margin-top: -10px;
+  margin-top: 10px;
 }
 
 
@@ -187,18 +182,18 @@
   line-height: 21px;
 }
 
-.list-view .c_content .title {
+.list-view .c_content .review {
   color: #484848;
   font-weight: 500;
   font-size: 16px;
   letter-spacing: 0.02em;
 }
 
-.list-view .c_content .review {
+.list-view .c_content .summary {
   font-weight: 300;
   font-size: 14px;
   letter-spacing: 0.05em;
-  margin-top: -10px;
+  margin-top: 10px;
 }
 
 
