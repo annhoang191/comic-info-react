@@ -1261,3 +1261,7 @@ a:hover {
 #lightgallery .item {
   margin-bottom: 30px;
 }
+
+.section-separation {
+  padding: 30px;
+}

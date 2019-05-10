@@ -6,14 +6,15 @@ import './style.css';
 const Search = ({onChange, value}) => {
   return(
     <div className="wrap">
-      <div className="search">
+      <form className="search">
         <input type="text"
           className="searchTerm"
-          placeholder="Searching for comic?" />
-        <button type="submit" className="searchButton">
+          placeholder="Searching for comic?"
+          onChange={onChange} />
+        <button type="submit" className="searchButton btn btn-primary">
           <i className="fa fa-search"></i>
         </button>
-      </div>
+      </form>
     </div>
   );
 }

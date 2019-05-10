@@ -73,6 +73,30 @@
   margin-top: 10px;
 }
 
+.summary {
+  overflow: hidden;
+  position: relative;
+  line-height: 1.2em;
+  max-height: 6em;
+  text-align: justify;
+  margin-right: -1em;
+  padding-right: 1em;
+}
+.summary:before {
+  content: '...';
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+.summary:after {
+  content: '';
+  position: absolute;
+  right: 0;
+  width: 1em;
+  height: 1em;
+  margin-top: 0.2em;
+  background: white;
+}
 
 /* ---- List View ---- */
 
